@@ -1,0 +1,12 @@
+<div class="app">
+  <h1>Suspense demo</h1>
+  <p>Lazy-loaded profile waits 1.2s so you can see the fallback.</p>
+
+  <button (click)="reloadProfile()">Reload profile</button>
+
+  @if (loading) {
+    <p class="loader">Loading profile...</p>
+  } @else if (ProfileComponent) {
+    <ng-container *ngComponentOutlet="ProfileComponent" />
+  }
+</div>
