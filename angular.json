@@ -57,6 +57,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "my-app:build:development"
+          },
           "configurations": {
             "production": {
               "buildTarget": "my-app:build:production"
